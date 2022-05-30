@@ -1,4 +1,5 @@
 
+import ItemListContainer from './component/ItemListContainer';
 import Navbar from './component/Navbar';
 import Test from './component/Test';
 
@@ -11,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <Navbar></Navbar>
-      <Test quien={"Juan Maria"} como={"Hola como va"} hacerAlert={hacerAlert}></Test>
+      <ItemListContainer greeting="darle estilos"></ItemListContainer>
     </div>
   );
 }
