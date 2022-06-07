@@ -1,0 +1,35 @@
+.cart{
+    border: 1px solid white;
+
+}
+
+.pl{
+    padding-left: 20px;
+}
+
+.container-car{
+    border: 3px solid #ccc;
+    width: 299px;
+    border-radius: 0.5em;
+}
+
+.size-btn{
+    font-size: 35px !important;
+}
+
+.btn-add{
+    padding-top: 20px;
+}
+
+.btn-add-c{
+    width: 299px !important;
+    font-size: 20px !important;
+}
+
+.number{
+    width: 201px;
+    display: inline-block;
+    text-align: center;
+    font-size: 30px;
+
+}
