@@ -32,17 +32,21 @@ function ItemListContainer(props) {
 
   useEffect(() => {
 
+    const task = new Promise((res, rej) =>{
+      setTimeout(() =>{
+          res(listado);
+      }, 2000)
+    });
+
     task.then((res)=>{
       setProductos(res)
     })
+
+    
   
   }, [])
 
-  const task = new Promise((res, rej) =>{
-    setTimeout(() =>{
-        res(listado);
-    }, 2000)
-  });
+  
 
   return (
     <div>
