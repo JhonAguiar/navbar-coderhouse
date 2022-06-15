@@ -1,11 +1,11 @@
 import React from 'react'
 import {Card, Button} from 'react-bootstrap';
-
+import './ItemDetail.css'
 
 function ItemDetail({producto}) {
     const {pictureUrl , title , description, price, category} = producto
     return (
-        <div className='container'>
+        <div className='container' style={{paddingTop: "220px"}}>
             <br />
             <div className="row">
                 <div className="col-lg-12">
@@ -14,25 +14,22 @@ function ItemDetail({producto}) {
                 </div>
                 <div className="col-lg-6">
 
-                    <Card style={{ width: '40rem'}}>
-                        <Card.Img variant="top" src={pictureUrl} />
+                    <Card >
+                        <Card.Img variant="top" src={"../"+pictureUrl} />
                     </Card>
 
                 </div>
                 <div className="col-lg-6">
                     <Card.Body>
-                        
                         <Card.Text>
                         {description}
                         </Card.Text>
-                        <h4>
-                        <br></br>
+                        <Card.Text>
                         {price}
-                        </h4>
-                        <br></br>
-                        <h3>
+                        </Card.Text>
+                        <Card.Text>
                         {category}
-                        </h3>
+                        </Card.Text>
                     </Card.Body>
                 </div> 
             </div>

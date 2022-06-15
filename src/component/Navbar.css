@@ -1,0 +1,79 @@
+
+@media (min-width: 1128px){
+    .nav-main{
+        position: fixed;
+        width: 100%;
+        z-index: 100000;
+        background-color: #fff;
+    }
+    .navbar{
+        height: 100px;
+        padding-left: 150px !important;
+        padding-right: 150px !important;
+        border-bottom: 1px solid #eee;
+    }
+
+    .navbar-nav.navbar-center {
+        position: absolute;
+        left: 50%;
+        transform: translatex(-50%);
+    }
+
+    .blue-shop{
+        color: #61DBFB;
+        font-size: 25px;
+        font-weight: bolder;
+        display: inline-block;
+    }
+
+    .searched{
+        width: 600px !important;
+        height: 65px;
+        border-radius: 3em !important;
+        padding-left: 33px !important;
+    }
+
+    .menu-sub{
+        width: 100%;
+        height: 120px;
+        text-align: center;
+        border-bottom: 2px solid #eee;
+        background-color: #fff;
+    }
+    .categories{
+        display: flex;
+        width: 400px;
+        margin: auto;
+    }
+
+    .category{
+        flex:auto;
+        height: 120px;
+        width: 120px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+     
+    }
+
+    .category-elems{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 30px;
+        border-bottom: 4px solid #000;
+        margin:4px
+    }
+
+    .category-elems:hover{
+        border-bottom: 4px solid #ccc;
+        font-weight: bolder;
+    }
+
+    .vinculo{
+        text-decoration: none;
+        color: #777;
+        text-align: center;
+    }
+}
+

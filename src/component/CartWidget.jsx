@@ -10,7 +10,7 @@ function CartWidget(props) {
   return (
     <div>
         
-        <FaCartArrowDown color="white" fontSize="2.5em"/>
+        <FaCartArrowDown  color="#777" fontSize="2.5em"/>
         <span className='text-car'>{props.valor}</span>
     </div>
   );
