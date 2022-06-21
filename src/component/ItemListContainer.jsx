@@ -14,9 +14,6 @@ import {useParams} from 'react-router-dom';
 
 function ItemListContainer(props) {
 
-  const onAdd = (cantidad) =>{
-    alert(`sumaste ${cantidad} productos`)
-  }
 
   const listado = [
     {id : 1, title : 'CAMISETA DE HOMBRE, MANGA CORTA REGULAR FIT BLANCA DE THE SIMPSONS ©FOX', description :'Camiseta de cuello redondo y manga corta. Detalle de estampación all over Homero Simpson ©FOX.', price : '$79', pictureUrl : camisaHomero, category : "camisetas"},
@@ -52,7 +49,7 @@ function ItemListContainer(props) {
 
     
   
-  }, [listado])
+  }, [id])
 
   
 

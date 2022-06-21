@@ -13,13 +13,13 @@ function ItemDetailContainer() {
         const getItem = async () => {
             await fetch("../Productos.json")
             .then(response => response.json())
-            .then(data => setProductos(data.find(el => el.id === parseInt(id))));
+            .then(data => setProductos(   data.find(el => el.id === parseInt(id))));
         };
 
         const timer = setTimeout(() => {
             getItem();
         }, 2000);
-    }, [productos]);
+    }, [id]);
 
 
     return (
