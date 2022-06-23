@@ -2,30 +2,28 @@
 import ItemDetailContainer from './component/ItemDetailContainer';
 import ItemListContainer from './component/ItemListContainer';
 import Navbar from './component/Navbar';
-import Test from './component/Test';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import './App.css'
 import ViewCart from './component/ViewCart';
+import CartContext from './context/CartContext';
+
 
 function App() {
-  function hacerAlert(){
-    alert("Hola Mundo")
-  }
-
   return (
     
     <div className="App">
+      <CartContext>
+        <BrowserRouter>
+          <Navbar></Navbar>
+          <Routes>
+            <Route path="/" element={<ItemListContainer/>}/>
+            <Route path="/category/:id" element={<ItemListContainer/>}/>
+            <Route path="/item/:id" element={<ItemDetailContainer/>}/>
+            <Route path="/cart" element={<ViewCart/>}/>
+          </Routes>
 
-      <BrowserRouter>
-        <Navbar></Navbar>
-        <Routes>
-          <Route path="/" element={<ItemListContainer/>}/>
-          <Route path="/category/:id" element={<ItemListContainer/>}/>
-          <Route path="/item/:id" element={<ItemDetailContainer/>}/>
-          <Route path="/cart" element={<ViewCart/>}/>
-        </Routes>
-
-      </BrowserRouter>
+        </BrowserRouter>
+      </CartContext>
 
       
       {/* <ItemListContainer greeting="darle estilos"></ItemListContainer> */}

@@ -25,14 +25,19 @@ function ItemCount({stock, initial, onAdd}) {
 
                 <div>
                     <div className='container-car'>
-                        <button className='btn text-primary size-btn' onClick={removeItem} disabled={itemCount === 0}>-</button>
+                        <div className='minus'>
+                          <button type="button" className='btn size-btn btn-remove' onClick={removeItem} disabled={itemCount === 0}>-</button>
+                        </div>
+                        
                         <div className='number'>{itemCount}</div>
-                        <button className='btn text-primary size-btn' onClick={addItem} disabled={itemCount === stock}>+</button>
+                        <div className='plus'>
+                          <button type="button" className='btn size-btn btn-adde' onClick={addItem} disabled={itemCount === stock}>+</button>
+                        </div>
                     </div>
                     <div className='btn-add'>
                         <button 
                             disabled={itemCount === 0}
-                            className='btn border border-primary text-primary btn-add-c' 
+                            className='btn border btn-add-c' 
                             onClick={() => onAdd(itemCount)}
                         >
                             Agregar al carrito</button>

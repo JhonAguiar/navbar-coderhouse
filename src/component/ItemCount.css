@@ -1,35 +1,61 @@
-.cart{
-    border: 1px solid white;
-
-}
 
 .pl{
     padding-left: 20px;
 }
 
-.container-car{
-    border: 3px solid #ccc;
-    width: 299px;
-    border-radius: 0.5em;
-}
 
 .size-btn{
-    font-size: 35px !important;
+    font-size: 30px !important;
 }
 
 .btn-add{
     padding-top: 20px;
+    color: #fff !important;
 }
 
 .btn-add-c{
-    width: 299px !important;
+    width: 100% !important;
     font-size: 20px !important;
+    background-color: #dc3545 !important ;
+    color: #fff !important ;
+}
+.btn-adde{
+    background-color: #dc3545 !important ;
+    color: #fff !important ;
+    width: 50px;
+    height: 50px;
+    border-radius: 100% !important;
+    font-size: 21px !important;
+    font-weight: bolder !important;
+}
+
+.container-car{
+    margin-top: 50px;
+    display: flex;
+}
+
+.btn-remove{
+    background-color: #dc3545 !important;
+    color: #fff !important;
+    width: 50px;
+    height: 50px;
+    border-radius: 100% !important;
+    font-size: 21px !important;
+    font-weight: bolder !important;
+
+}
+.minus{
+    width: 20%;
+    text-align: center;
+}
+
+.plus{
+    width: 20%;
+    text-align: center;
 }
 
 .number{
-    width: 201px;
-    display: inline-block;
+    width: 80%;
     text-align: center;
-    font-size: 30px;
-
+    font-size: 35px;
 }

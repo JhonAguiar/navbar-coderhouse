@@ -13,7 +13,7 @@ function Navbar() {
       <nav className="navbar navbar-expand-lg navbar-dark bg-default text-dark">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
-            <img src={logo} alt="" width={75} />
+            {/* <img src={logo} alt="" width={75} /> */}
             <div className='blue-shop'>Tienda</div>
           </Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,7 +35,7 @@ function Navbar() {
       <div className='menu-sub'>
         <div className="categories">
           <div className="category">
-            <Link to={`category/camisetas`} >
+            <Link to={`category/camisetas`} className="vinculo">
               <div className="category-elems">
                 <GiPoloShirt fontSize={30} color={"#777"}></GiPoloShirt>
                 <div className='vinculo'>Camisetas</div>
@@ -43,15 +43,15 @@ function Navbar() {
             </Link>
           </div>
           <div className="category">
-            <Link to={`category/sandalias`}>
+            <Link to={`category/sandalias`} className="vinculo">
               <div className="category-elems">
                 <GiFlipFlops fontSize={30} color={"#777"}></GiFlipFlops>
                 <div className='vinculo'>Sandalias</div>
               </div>
             </Link>  
           </div>
-          <div className="category">
-            <Link to={`category/buzos`}>
+          <div className="category" >
+            <Link to={`category/buzos`} className="vinculo">
               <div className="category-elems">
                 <GiHoodie fontSize={30} color={"#777"}></GiHoodie>
                 <div className='vinculo'>Buzos</div>
@@ -59,7 +59,7 @@ function Navbar() {
             </Link> 
           </div>
           <div className="category">
-            <Link to={`category/bermudas`}>
+            <Link to={`category/bermudas`} className="vinculo">
               <div className="category-elems">
                 <GiShorts fontSize={30} color={"#777"}></GiShorts>
                 <div className='vinculo'>

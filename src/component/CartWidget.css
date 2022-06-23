@@ -1,9 +1,18 @@
 .text-car{
     color: #777;
-    font-size: 1.9em;
+    font-size: 1.6em;
     margin-right: 20px;
-    padding-top: 20px;
+    padding-top: 0px;
     margin-left: 10px;
+    display: inline-flex;
+}
+
+.text-icon{
+    color: #777;
+    font-size: 1em;
+    margin-right: 20px;
+    margin-left: 10px;
+    display: inline-flex;
 }
 
 svg {

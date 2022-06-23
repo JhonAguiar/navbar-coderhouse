@@ -1,22 +1,18 @@
-import React , {useState } from 'react'
-import {Card, Button} from 'react-bootstrap';
+import React , {useState, useContext } from 'react'
+import {Card} from 'react-bootstrap';
 import ItemCount from './ItemCount';
 import './ItemDetail.css'
 import { Link } from 'react-router-dom';
+import { MiContexto } from '../context/CartContext';
 
 function ItemDetail({producto}) {
     
     const [addedToCart, setAddedToCart] = useState(false);
- 
-    const {pictureUrl , title , description, price, category , stock} = producto
-
-    const addItem = ( producto ) => {
-
-        let newCart = [];
     
-        newCart = newCart.concat(producto);
+    const { addItem, quantityInCart, removeItem } = useContext(MiContexto);
 
-    }
+    const {id, pictureUrl , title , description, price, category , stock} = producto
+
 
     const onAdd = (cantidad) =>{
         if (cantidad > 0) {
@@ -26,6 +22,12 @@ function ItemDetail({producto}) {
             alert('Error al agregar al carrito: la cantidad no puede ser 0')
         }
     }
+
+    const removeFromCart = (id) => {
+        removeItem(id);
+        setAddedToCart(false);
+    }
+    
     return (
         <div className='container' style={{paddingTop: "220px"}}>
             <br />
@@ -56,15 +58,16 @@ function ItemDetail({producto}) {
                     {
                     !addedToCart && (
                         <ItemCount stock={stock} initial={0} onAdd={onAdd}/>
-                        )}
+                    )}
                     {
                     addedToCart && (
                         <>
-                        <Link className='btn border border-primary text-primary btn-add-c'  to="/cart" >Finalizar compra</Link>
+                        <br />
+                        <br></br>
+                        <Link className='btn border  btn-add-c'  to="/cart" >Ir al carro</Link>
+                        <br /><br />
+                        <button className='btn border  btn-add-c' quantity={ quantityInCart(id)} removeFromCart={ removeFromCart }>Eliminar del carro</button>
                         </>
-                        
-                        
-
                     )}
                 </div> 
             </div>
