@@ -56,11 +56,14 @@
 .min{
     font-size: 45px;
     line-height: 14px;
+    padding-top: 0px !important;
 }
 
 .plus{
     font-size: 30px;
     line-height: 20px;
+    padding-top: 0px !important;
+    font-weight: bolder !important;
 }
 
 .count{
