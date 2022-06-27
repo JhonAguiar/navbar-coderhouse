@@ -23,7 +23,7 @@ function ItemDetail({producto}) {
         }
     }
 
-    const removeFromCart = (id) => {
+    const removeFromCart = () => {
         removeItem(id);
         setAddedToCart(false);
     }
@@ -49,10 +49,10 @@ function ItemDetail({producto}) {
                         {description}
                         </Card.Text>
                         <Card.Text>
-                        {price}
+                        <span style={{ color: "#dc3545", fontWeight: "bolder", fontSize: '20px' }}>${price}</span>
                         </Card.Text>
                         <Card.Text>
-                        {category}
+                        <span style={{ fontWeight: "bolder", fontSize: '20px' }}>{category}</span>
                         </Card.Text>
                     </Card.Body>
                     {
@@ -66,7 +66,7 @@ function ItemDetail({producto}) {
                         <br></br>
                         <Link className='btn border  btn-add-c'  to="/cart" >Ir al carro</Link>
                         <br /><br />
-                        <button className='btn border  btn-add-c' quantity={ quantityInCart(id)} removeFromCart={ removeFromCart }>Eliminar del carro</button>
+                        <button className='btn border  btn-add-c' onClick={removeFromCart} >Eliminar del carro</button>
                         </>
                     )}
                 </div> 

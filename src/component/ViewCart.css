@@ -1,0 +1,189 @@
+
+.carder{
+    border: 1px solid #eee;
+}
+
+.content-cart{
+    padding: 30px !important;
+}
+
+.content-sumary{
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+.sumary-resume{
+    padding: 30px !important;
+    background-color: #eee;
+}
+
+.content-title{
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+
+.title-cart-buy{
+    width: 50%;
+}
+
+.item-counts{
+    width: 50%;
+    text-align: right;
+}
+
+.table-cart > thead{
+    font-size: 15px;
+    color: #aaa;
+    text-align: center;
+}
+
+.table-cart > tbody{
+    font-size: 15px;
+    color: #000;
+    font-weight: bolder;
+}
+
+.quantity-cont{
+    display: flex;
+}
+
+.qua{
+    width: 33.5%;
+    height: 28px;
+    text-align: center;
+}
+.min{
+    font-size: 45px;
+    line-height: 14px;
+}
+
+.plus{
+    font-size: 30px;
+    line-height: 20px;
+}
+
+.count{
+    border: 1px solid #ddd;
+}
+
+.content-product{
+    display: flex;
+    width: 100%;
+}
+
+.content-img{
+    text-align: center;
+    width: 30%;
+}
+
+.content-details{
+    width: 70%;
+    padding-left: 20px;
+}
+
+.img-product{
+    width: 100%;
+}
+
+.rem{
+    border: none;
+    background-color: #fff;
+    padding: 0px;
+    color: #aaa;
+}
+
+.cat{
+    color: #dc3545;
+    font-size: 13px;
+}
+
+.price, .total{
+    text-align: right;
+}
+
+.next-buy{
+    color:#dc3545;
+    text-decoration: none
+}
+
+.next-buy:hover{
+    color:#aaa
+}
+
+.btn-red{
+    width: 100%;
+    background-color: #dc3545 !important;
+    color:white !important
+}
+
+.btn-red2{
+
+    background-color: #dc3545 !important;
+    color:white !important
+}
+
+.btn-def-red{
+    width: 100%;
+    border: 1px solid #dc3545 !important;
+    color: #dc3545 !important;
+}
+
+.summary-content{
+    height: 260px;
+    
+}
+
+.contenedor {
+    margin: 2rem auto;
+
+    height: 400px;
+
+
+    overflow:auto;
+    box-sizing: border-box;
+    padding:0 1rem;
+}
+
+/* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
+
+.contenedor::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.contenedor::-webkit-scrollbar:vertical {
+    width:14px;
+}
+
+.contenedor::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+    display: none;
+} 
+
+.contenedor::-webkit-scrollbar:horizontal {
+    height: 20px;
+}
+
+.contenedor::-webkit-scrollbar-thumb {
+    background-color: #dc3545;
+    border-radius: 20px;
+    border: 2px solid #fff;
+}
+
+.table-order{
+    width: 100%;
+}
+
+.table-order > tbody > tr > td{
+    width: 50%;
+    padding-bottom: 20px;
+}
+
+.amount-total{
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.precio-total{
+    text-align: right;
+    font-size: 20px;
+}

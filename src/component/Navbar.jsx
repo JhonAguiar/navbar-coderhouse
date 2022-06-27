@@ -1,4 +1,5 @@
 // import logo from './logo.svg';
+import React , { useContext } from 'react'
 import logo from '../logo.svg';
 import CartWidget from './CartWidget';
 import { FaSearch } from 'react-icons/fa';
@@ -7,7 +8,12 @@ import { GiFlipFlops, GiHoodie, GiShorts, GiPoloShirt } from 'react-icons/gi';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
 
+import { MiContexto } from '../context/CartContext';
+
 function Navbar() {
+
+  const { totalInCart } = useContext(MiContexto)
+
   return (
     <div className='nav-main'>
       <nav className="navbar navbar-expand-lg navbar-dark bg-default text-dark">
@@ -16,9 +22,7 @@ function Navbar() {
             {/* <img src={logo} alt="" width={75} /> */}
             <div className='blue-shop'>Tienda</div>
           </Link>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
+          
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
 
             <div className="nav navbar-nav navbar-center">
@@ -29,7 +33,13 @@ function Navbar() {
             </div> 
             
           </div>
-          <CartWidget valor={'4'}></CartWidget>
+          <Link to='/cart' className='enlace'>
+            <CartWidget valor={ totalInCart() }></CartWidget>
+          </Link>
+          
+          {/* <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button> */}
         </div>
       </nav>
       <div className='menu-sub'>

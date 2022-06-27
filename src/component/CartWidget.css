@@ -1,20 +1,23 @@
+.cart-widget{
+    background-color: #dc3545;
+    padding: 2px;
+    border-radius: 0.8em;
+}
+
 .text-car{
-    color: #777;
-    font-size: 1.6em;
-    margin-right: 20px;
+    color: #fff;
+    font-size: 1em;
+    margin-right: 12px;
     padding-top: 0px;
-    margin-left: 10px;
+    margin-left: -8px;
     display: inline-flex;
 }
 
 .text-icon{
-    color: #777;
+    color: #fff;
     font-size: 1em;
-    margin-right: 20px;
+    margin-right: 12px;
     margin-left: 10px;
     display: inline-flex;
 }
 
-svg {
-    margin-top: -20px;
-}

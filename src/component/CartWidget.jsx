@@ -8,10 +8,13 @@ function CartWidget(props) {
 
 
   return (
-    <div>
-        
-        <div className='text-icon'><FaCartArrowDown  color="#777" fontSize="1.4em"/></div>
-        <div className='text-car'>{props.valor}</div>
+    <div className='cart-widget'>
+        <div className='text-icon'><FaCartArrowDown viewBox='0 0 576 400'  color="#fff" /></div>
+        {
+          props.valor != 0 && (
+          <div className='text-car'>{props.valor}</div>
+          )
+        }
     </div>
   );
 }

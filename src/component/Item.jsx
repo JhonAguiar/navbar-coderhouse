@@ -8,8 +8,8 @@ const Item = ({producto}) => {
 
     return (
 
-            <div className="col-lg-3" style={{paddingTop: '50px' }}>
-                <Card style={{ width: '18rem'}}>
+            <div className="col-lg-3 col-md-6" style={{paddingTop: '50px' }}>
+                <Card >
                     
                     <div id="padre">
                         <img className="card-img-top" variant="top"  src={pictureUrl} alt="Card image cap"/>

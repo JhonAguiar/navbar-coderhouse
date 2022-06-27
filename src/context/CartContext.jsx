@@ -46,7 +46,49 @@ function CartContext( { children }) {
         return 0;
     }
     
+    const totalInCart = () => {
+        return cart.reduce( (acc, item) => {
+          return acc = acc + item.quantity
+        }, 0)
+    }
+
+    const totalPriceInCart = () => {
+        return cart.reduce((acc, _item) => {
+          return acc + (_item.quantity * _item.price)
+        }, 0);
+    }
+
+    const addItemQuantity = ({ id }) => {
+        let newCart = [];
+        newCart = cart.reduce((acc, _item) => {
+          if(id !== _item.id) {
+            return acc.concat(_item);
+          } else {
+            return acc.concat({ ..._item, quantity: _item.quantity + 1});
+          }
+        }, []);
+        setCart(newCart);
+      }
     
+
+    const removeItemQuantity = ({ id, quantity }) => {
+        console.log(id)
+        if (quantity === 1) {
+          removeItem(id);
+          return;
+        }
+    
+        let newCart = [];
+        newCart = cart.reduce((acc, _item) => {
+          if (id !== _item.id) {
+            return acc.concat(_item);
+          } else {
+            return acc.concat({ ..._item, quantity: _item.quantity - 1 });
+          }
+        }, []);
+        setCart(newCart);
+    
+      }
 
 
     return (
@@ -55,7 +97,11 @@ function CartContext( { children }) {
             addItem,
             removeItem,
             clear,
-            quantityInCart
+            quantityInCart,
+            totalInCart,
+            totalPriceInCart,
+            addItemQuantity,
+            removeItemQuantity
           }}>
             { children }
           </MiContexto.Provider>

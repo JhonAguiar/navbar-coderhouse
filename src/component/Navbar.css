@@ -1,5 +1,5 @@
 
-@media (min-width: 1128px){
+
     .nav-main{
         position: fixed;
         width: 100%;
@@ -41,14 +41,14 @@
     }
     .categories{
         display: flex;
-        width: 400px;
+        width: 60%;
         margin: auto;
     }
 
     .category{
         flex:auto;
         height: 120px;
-        width: 120px;
+        width: 25%;
         justify-content: center;
         align-items: center;
         text-align: center;
@@ -59,7 +59,7 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        padding: 30px;
+        padding: 20px;
         border-bottom: 4px solid #000;
         margin:4px
     }
@@ -74,5 +74,8 @@
         color: #777;
         text-align: center;
     }
-}
+
+    .enlace{
+        text-decoration: none;
+    }
 
