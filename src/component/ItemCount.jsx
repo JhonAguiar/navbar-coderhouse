@@ -22,16 +22,15 @@ function ItemCount({stock, initial, onAdd}) {
     return (
         <div>
             <div className='pl'>
-
                 <div>
                     <div className='container-car'>
                         <div className='minus'>
-                          <button type="button" className='btn size-btn btn-remove' onClick={removeItem} disabled={itemCount === 0}>-</button>
+                          <button type="button" className='size-btn btn-remove' onClick={removeItem} disabled={itemCount === 0}>-</button>
                         </div>
                         
                         <div className='number'>{itemCount}</div>
                         <div className='plus'>
-                          <button type="button" className='btn size-btn btn-adde' onClick={addItem} disabled={itemCount === stock}>+</button>
+                          <button type="button" className='size-btn btn-adde' onClick={addItem} disabled={itemCount === stock}>+</button>
                         </div>
                     </div>
                     <div className='btn-add'>

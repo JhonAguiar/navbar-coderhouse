@@ -33,25 +33,25 @@ function ItemDetail({producto}) {
             <br />
             <div className="row">
                 <div className="col-lg-12">
-                    <h2>{title}</h2>
+                    <h2 className="title-detail">{title}</h2>
                     <br />
                 </div>
-                <div className="col-lg-6">
+                <div className="col-lg-6 col-md-8 col-sm-8">
 
                     <Card >
                         <Card.Img className="detail-img" variant="top" src={"../"+pictureUrl} />
                     </Card>
 
                 </div>
-                <div className="col-lg-6">
+                <div className="col-lg-6 col-md-4 col-sm-4">
                     <Card.Body>
-                        <Card.Text>
+                        <Card.Text className="textos">
                         {description}
                         </Card.Text>
-                        <Card.Text>
+                        <Card.Text className="textos">
                         <span style={{ color: "#dc3545", fontWeight: "bolder", fontSize: '20px' }}>${price}</span>
                         </Card.Text>
-                        <Card.Text>
+                        <Card.Text className="textos">
                         <span style={{ fontWeight: "bolder", fontSize: '20px' }}>{category}</span>
                         </Card.Text>
                     </Card.Body>
@@ -63,7 +63,7 @@ function ItemDetail({producto}) {
                     addedToCart && (
                         <>
                         <br />
-                        <br></br>
+
                         <Link className='btn border  btn-add-c'  to="/cart" >Ir al carro</Link>
                         <br /><br />
                         <button className='btn border  btn-add-c' onClick={removeFromCart} >Eliminar del carro</button>

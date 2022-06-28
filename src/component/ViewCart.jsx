@@ -105,7 +105,7 @@ function ViewCart() {
                     </table>
                   </div>
                   <div>
-                    <button className='btn btn-red'>Finalizar Compra</button>
+                    <Link className='btn btn-red' to="/checkout">Finalizar Compra</Link>
                   </div>
                   <br></br>
                   <div>

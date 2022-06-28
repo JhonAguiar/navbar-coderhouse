@@ -1,5 +1,45 @@
+
 .detail-img{
     height: 50vh;
     width: 50vh !important;
     margin: auto;
+}
+
+.card-t {
+    position: absolute;    /* posición absolute con respecto al padre */
+    bottom: 0;             /* posicionada en la esquina inferior derecha */
+    right: 20vh;
+    color: #b02a37;
+    font-size: 20px;
+    font-weight: bolder;
+    
+  }
+
+@media (max-width: 760px) {
+    .detail-img{
+        height: 40vh;
+        width: 40vh !important;
+        margin: auto;
+    }
+    
+}
+
+@media (max-width: 560px) {
+    .detail-img{
+        height: 30vh;
+        width: 30vh !important;
+        margin: auto;
+    }
+
+    .title-detail{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 470px) {
+    .detail-img{
+        height: 30vh;
+        width: 30vh !important;
+        margin: auto;
+    }
 }
