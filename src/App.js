@@ -8,7 +8,7 @@ import ViewCart from './component/ViewCart';
 import CartContext from './context/CartContext';
 import Checkout from './component/Checkout';
 import { initializeApp } from "firebase/app";
-
+import React from 'react';
 
 function App() {
 
