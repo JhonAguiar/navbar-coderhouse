@@ -7,7 +7,7 @@ function CartContext( { children }) {
 
     const [cart, setCart] = useState([]);
 
-    // const [darkMode,setDarkMode] = useState(true);
+    const [darkMode,setDarkMode] = useState(false);
 
     const addItem = ( item ) =>{
         let newCart = [];
@@ -72,7 +72,6 @@ function CartContext( { children }) {
     
 
     const removeItemQuantity = ({ id, quantity }) => {
-        console.log(id)
         if (quantity === 1) {
           removeItem(id);
           return;
@@ -101,7 +100,9 @@ function CartContext( { children }) {
             totalInCart,
             totalPriceInCart,
             addItemQuantity,
-            removeItemQuantity
+            removeItemQuantity,
+            darkMode: darkMode, 
+            setDarkMode: setDarkMode,
           }}>
             { children }
           </MiContexto.Provider>

@@ -9,6 +9,7 @@ import CartContext from './context/CartContext';
 import Checkout from './component/Checkout';
 import { initializeApp } from "firebase/app";
 import React from 'react';
+import Footer from './component/Footer';
 
 function App() {
 
@@ -36,7 +37,7 @@ function App() {
             <Route path="/cart" element={<ViewCart/>}/>
             <Route path="/checkout" element={<Checkout/>}/>
           </Routes>
-
+          <Footer></Footer>
         </BrowserRouter>
       </CartContext>
 

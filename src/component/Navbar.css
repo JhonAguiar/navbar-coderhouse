@@ -1,3 +1,9 @@
+.btn-mode{
+    border: none;
+    background-color: transparent;
+    margin-left: 30px;
+}
+
 .nav-main{
     position: fixed;
     width: 100%;
@@ -58,7 +64,6 @@
     align-items: center;
     text-align: center;
     padding: 20px;
-    border-bottom: 4px solid #000;
     margin:4px
 }
 
@@ -69,7 +74,6 @@
 
 .vinculo{
     text-decoration: none;
-    color: #777;
     text-align: center;
 }
 
@@ -112,5 +116,13 @@
 
     .vinculo{
         font-size: 10px;
+    } 
+}
+
+@media (max-width: 700px) {
+    button.btn-mode {
+        right: 90px;
+        top: 34px;
+        position: absolute;
     }
 }

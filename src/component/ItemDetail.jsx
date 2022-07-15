@@ -1,18 +1,17 @@
-import React , {useState, useContext } from 'react'
-import {Card} from 'react-bootstrap';
-import ItemCount from './ItemCount';
-import './ItemDetail.css'
+import { useContext, useState } from 'react';
+import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { MiContexto } from '../context/CartContext';
+import ItemCount from './ItemCount';
+import './ItemDetail.css';
 
 function ItemDetail({producto}) {
-    
+
     const [addedToCart, setAddedToCart] = useState(false);
     
-    const { addItem, quantityInCart, removeItem } = useContext(MiContexto);
+    const { addItem, quantityInCart, removeItem , setDarkMode, darkMode} = useContext(MiContexto);
 
     const {id, pictureUrl , title , description, price, category , stock} = producto
-
 
     const onAdd = (cantidad) =>{
         if (cantidad > 0) {
@@ -38,8 +37,8 @@ function ItemDetail({producto}) {
                 </div>
                 <div className="col-lg-6 col-md-8 col-sm-8">
 
-                    <Card >
-                        <Card.Img className="detail-img" variant="top" src={"../"+pictureUrl} />
+                    <Card style={{backgroundColor: darkMode === false ? "#fff" : "#222"}} >
+                        <Card.Img className="detail-img" variant="top" src={pictureUrl} />
                     </Card>
 
                 </div>

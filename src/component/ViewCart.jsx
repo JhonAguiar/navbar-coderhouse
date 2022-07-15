@@ -1,17 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react';
 import { FaArrowLeft } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import { MiContexto } from '../context/CartContext';
+import emptyCart from '../trolley.png';
 import './ViewCart.css';
-import { Link } from 'react-router-dom'
-import {useContext} from 'react';
-import {MiContexto} from '../context/CartContext';
-import emptyCart from '../trolley.png'
 
 function ViewCart() {
 
-  const { totalInCart,cart, clear, totalPriceInCart, addItemQuantity, removeItemQuantity, removeItem } = useContext(MiContexto)
-
-
-
+  const { totalInCart, cart, clear, totalPriceInCart, addItemQuantity, removeItemQuantity, removeItem,  darkMode } = useContext(MiContexto)
 
   return (
     Boolean(cart.length) ? (
@@ -42,8 +38,8 @@ function ViewCart() {
                       <tbody>
                         {
                           cart.map(pr =>(
-                            <tr>
-                              <td>
+                            <tr key={pr}>
+                              <td style={{color: darkMode === false ? "#333" : "#fff"}}>
                                 <div className='content-product'>
                                   <div className='content-img'>
                                     <img src={pr.pictureUrl} 
@@ -54,26 +50,26 @@ function ViewCart() {
                                     <h6 className='pro'>{pr.title}</h6>
                                     <h6 className='cat'>{pr.category}</h6>
                                     <div>
-                                      <button className='rem' onClick={()=>{
+                                      <button style={{color: darkMode === false ? "#333" : "#fff" , background: darkMode === false ? "#fff" : "#222"}} className='rem' onClick={()=>{
                                         removeItem(pr.id)
                                       } } >Remove</button>
                                     </div>
                                   </div>
                                 </div>
                               </td>
-                              <td>
+                              <td style={{color: darkMode === false ? "#333" : "#fff" }} >
                                 <div className='quantity-cont'>
-                                   <button className='btn qua min' onClick={ () =>{
+                                   <button className='btn qua min' style={{color: darkMode === false ? "#333" : "#fff" }}  onClick={ () =>{
                                     removeItemQuantity(pr)}
                                     }>-</button>
                                   <div className='qua count'>{pr.quantity}</div>
-                                  <button className='btn qua plus' onClick={ () =>{
+                                  <button className='btn qua plus' style={{color: darkMode === false ? "#333" : "#fff" }}  onClick={ () =>{
                                     addItemQuantity(pr)}
                                     }>+</button> 
                                 </div>
                               </td>
-                              <td className='price'>${pr.price}</td>
-                              <td className='total'>${pr.price * pr.quantity}</td>
+                              <td className='price' style={{color: darkMode === false ? "#333" : "#fff" }} >${pr.price}</td>
+                              <td className='total' style={{color: darkMode === false ? "#333" : "#fff" }} >${pr.price * pr.quantity}</td>
                             </tr>
                           ))
                         }
@@ -82,7 +78,7 @@ function ViewCart() {
                     </table>
                 </div>
               </div>  
-              <div className="col-lg-4 sumary-resume">
+              <div className="col-lg-4 sumary-resume" style={{color: darkMode === false ? "#333" : "#333" }} >
                 <div className='content-sumary'>
                   <h3 className='summary'>Resumen de orden</h3>
                 </div>

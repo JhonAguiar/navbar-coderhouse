@@ -1,15 +1,17 @@
 // @ts-nocheck
-import React from 'react'
-import {useState, useEffect} from 'react';
+import { doc, getDoc, getFirestore  } from "firebase/firestore";
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import ItemDetail from './ItemDetail';
-import { Link, useParams } from 'react-router-dom'
-import { doc, getDoc, getFirestore} from "firebase/firestore"
+import Loading from "./Loading";
 
 
 function ItemDetailContainer() {
     
     const { id } = useParams();
     const [productos, setProductos] = useState([])
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(false);
 
     useEffect(() => {
 
@@ -20,23 +22,26 @@ function ItemDetailContainer() {
 
         getDoc(prod).then((res) =>{
             setProductos({...res.data(), id: res.id})
+        }).catch((error) =>{
+            setError(error);
+        }).finally(() =>{
+            setLoading(false);
         })
 
-
-        // const getItem = async () => {
-        //     await fetch("../Productos.json")
-        //     .then(response => response.json())
-        //     .then(data => setProductos(   data.find(el => el.id === parseInt(id))));
-        // };
-
-        // const timer = setTimeout(() => {
-        //     getItem();
-        // }, 2000);
     }, [id]);
 
 
     return (
-        <ItemDetail producto={productos}/>
+        <>
+        {loading ?
+                <Loading></Loading>
+            :
+                <ItemDetail producto={productos}/>
+            
+        }
+        </>
+        
+       
     )
 }
 
