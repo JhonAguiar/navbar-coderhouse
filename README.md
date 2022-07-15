@@ -53,6 +53,4 @@ Instalar las dependencias:
 
 ## URL del proyecto
 
-```
-    * [https://camada31205.web.app/](https://camada31205.web.app/)
-```
+* [https://camada31205.web.app/](https://camada31205.web.app/)
